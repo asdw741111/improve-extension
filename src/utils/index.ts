@@ -3,7 +3,7 @@
  * @author      : 池宗洋 chizongyang@mininglamp.com
  * @date        : 2023-05-05 14:22:23
  * @LastAuthor  : 池宗洋 chizongyang@mininglamp.com
- * @lastTime    : 2024-03-11 10:30:12
+ * @lastTime    : 2024-03-11 15:11:06
  * @FilePath    : /improve/src/utils/index.ts
  */
 
@@ -12,7 +12,6 @@
  * 是否生产环境
  */
 export const IS_PROD = NODE_ENV === "production"
-export const IS_IIFE = BUILD_MODE === "iife"
 
 /**
  * 从url获取query值

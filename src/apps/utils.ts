@@ -5,7 +5,7 @@ import { Looper } from "@/utils"
  * @author      : 池宗洋 chizongyang@mininglamp.com
  * @date        : 2023-03-22 18:30:46
  * @LastAuthor  : 池宗洋 chizongyang@mininglamp.com
- * @lastTime    : 2024-03-11 10:39:13
+ * @lastTime    : 2024-03-11 15:11:01
  * @FilePath    : /improve/src/apps/utils.ts
  */
 const isProd = NODE_ENV === "production"
@@ -13,7 +13,6 @@ const isProd = NODE_ENV === "production"
 const loadJS = (url: string) => {
   const dom = document.createElement("script")
   dom.setAttribute("src", url)
-  // dom.setAttribute("type", IS_IIFE ? "text/javascript" : "module")
   dom.setAttribute("type", "module")
   document.head.appendChild(dom)
 }

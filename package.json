@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:es": "rm -rf dist & rollup -c config/rollup.config.js --environment NODE_ENV:production,BUILD_MODE:es",
-    "build:iife": "rm -rf dist & rollup -c config/rollup.config.js --environment NODE_ENV:production,BUILD_MODE:iife",
-    "start": "rollup --watch -c config/rollup.config.js --environment NODE_ENV:development,BUILD_MODE:es & http-server ./dist -p 8080 --cors",
+    "build": "rm -rf dist & rollup -c config/rollup.config.js --environment NODE_ENV:production,BUILD_MODE:iife",
+    "start": "rollup --watch -c config/rollup.config.js --environment NODE_ENV:development,BUILD_MODE:iife & http-server ./dist -p 8080 --cors",
     "lint": "eslint --ext .js,.ts src",
     "lint:fix": "eslint --fix --ext .js,.ts src"
   },

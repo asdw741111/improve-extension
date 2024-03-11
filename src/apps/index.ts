@@ -3,10 +3,9 @@
  * @author      : 池宗洋 chizongyang@mininglamp.com
  * @date        : 2022-02-23 17:57:08
  * @LastAuthor  : 池宗洋 chizongyang@mininglamp.com
- * @lastTime    : 2024-03-11 10:33:29
+ * @lastTime    : 2024-03-11 15:10:51
  * @FilePath    : /improve/src/apps/index.ts
  */
-import { IS_IIFE, } from "@/utils"
 import { sites } from "./config"
 import { loadLib } from "./utils"
 
@@ -21,11 +20,7 @@ const activeApp = (scriptInfo: typeof sites[0]) => {
   }
   console.log("匹配到应用", scriptInfo.name, "开始执行")
   if (scriptInfo.mod) {
-    if (IS_IIFE) {
-      scriptInfo.mod.init()
-    } else {
-      import(`./sites/${scriptInfo.mod}.ts`).then(({ default: DefaultExport}) => DefaultExport.init())
-    }
+    scriptInfo.mod.init()
     console.log("load mod", scriptInfo.mod)
   } else if (scriptInfo.url) {
     loadLib(scriptInfo.url)
