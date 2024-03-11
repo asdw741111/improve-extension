@@ -1,0 +1,36 @@
+{  
+  "name": "浏览器体验优化",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "对一些站点限制做优化例如强制登录、不允许复制等", 
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }, 
+  "browser_action": {  
+    "default_icon": "images/icon48.png",
+    "default_title": "Improve",
+    "default_popup": "html/popup.html"
+  },
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js" : [ "./lib/jquery-3.3.1.min.js", "./scripts/main.js"],
+      "run_at": "document_idle"
+    }
+  ], 
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "background" : {
+    "persistent": true,
+    "scripts" : ["./lib/jquery-3.3.1.min.js", "./scripts/background.js"]
+  },
+  "web_accessible_resources": []
+} 

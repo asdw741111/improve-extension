@@ -1,0 +1,9 @@
+public/public
+src/**/*-test.js
+src/public
+src/routes/chart/ECharts/theme
+src/routes/chart/highCharts/mapdata
+src/utils/field.js
+mock
+dist
+node_modules
