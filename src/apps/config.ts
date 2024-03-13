@@ -7,7 +7,7 @@
  * @author      : 池宗洋 chizongyang@mininglamp.com
  * @date        : 2022-02-23 17:57:08
  * @LastAuthor  : 池宗洋 chizongyang@mininglamp.com
- * @lastTime    : 2024-03-11 15:10:34
+ * @lastTime    : 2024-03-11 18:10:08
  * @FilePath    : /improve/src/apps/config.ts
  */
 import csdn from "./sites/csdn"
@@ -15,7 +15,8 @@ import zhihu from "./sites/zhihu"
 
 const sites = [
   {id: 1, name: "zhihu", match: "https://zhuanlan.zhihu.com/p/.+", enable: true, version: "1.0.0", mod: zhihu},
-  {id: 2, name: "csdn", match: "https://blog.csdn.net/.+/article/details/.+", enable: true, version: "1.0.0", mod: csdn},
+  {id: 2, name: "zhihu2", match: "https://www.zhihu.com/question/.+", enable: true, version: "1.0.0", mod: zhihu},
+  {id: 3, name: "csdn", match: "https://blog.csdn.net/.+/article/details/.+", enable: true, version: "1.0.0", mod: csdn},
 ] as SitePluginConfigType[]
 
 
