@@ -3,7 +3,7 @@
  * @author      : 池宗洋 chizongyang@mininglamp.com
  * @date        : 2024-03-11 14:31:24
  * @LastAuthor  : 池宗洋 chizongyang@mininglamp.com
- * @lastTime    : 2024-03-19 14:24:34
+ * @lastTime    : 2024-03-19 15:10:08
  * @FilePath    : /improve/src/apps/sites/zhihu.ts
  */
 
@@ -40,13 +40,19 @@ const plainLink = () => {
   })
 }
 
+const removeAd = () => {
+  // 侧边广告
+  $(".Banner-link").remove()
+  // 问题中间插入的广告
+  $(".Pc-word").remove()
+}
+
 const addPanel = () => {
-  const btn = $("<button type=\"Button Button--primary\" style=\"position: fixed;right: 20px;top: 10px;z-index:99999;\">清洁模式</button>")
+  const btn = $("<button type='button' class=\"Button Button--primary\" style=\"position: fixed;right: 20px;top: 10px;z-index:99999;\">清洁模式</button>")
   $(document.body).append(btn)
   btn.on("click", () => {
     plainLink()
-    // 侧边广告
-    $(".Banner-link").remove()
+    removeAd()
   })
 }
 /**
@@ -59,6 +65,7 @@ const init = () => {
   "use strict"
   checkLogin()
   plainLink()
+  removeAd()
   addPanel()
 }
 
