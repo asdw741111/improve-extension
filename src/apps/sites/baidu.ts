@@ -4,11 +4,10 @@
  * @author      : 池宗洋 chizongyang@mininglamp.com
  * @date        : 2024-03-11 14:31:24
  * @LastAuthor  : 池宗洋 chizongyang@mininglamp.com
- * @lastTime    : 2024-03-19 15:41:42
+ * @lastTime    : 2024-03-19 16:35:16
  * @FilePath    : /improve/src/apps/sites/baidu.ts
  */
 
-import { waitUntilRender } from "../utils"
 import $ from "jquery"
 
 const removeAd = () => {
@@ -16,22 +15,6 @@ const removeAd = () => {
   $(".ad-widget").remove()
 }
 
-const registEvent = () => {
-  waitUntilRender({
-    check: () => $("#_mask").length > 0,
-  }).then(() => {
-    console.log("等待请求数据后移除广告")
-    waitUntilRender({
-      check: () => !$("#_mask").length,
-      maxWaitSecond: 5,
-    }).then(() => {
-      setTimeout(() => {
-        console.log("请求结束 移除广告", $("#content_left > div").length)
-        removeAd()
-      }, 100)
-    })
-  })
-}
 
 /**
  * 示例：
