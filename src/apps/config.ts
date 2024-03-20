@@ -7,18 +7,20 @@
  * @author      : 池宗洋 chizongyang@mininglamp.com
  * @date        : 2022-02-23 17:57:08
  * @LastAuthor  : 池宗洋 chizongyang@mininglamp.com
- * @lastTime    : 2024-03-19 15:17:55
+ * @lastTime    : 2024-03-19 18:30:28
  * @FilePath    : /improve/src/apps/config.ts
  */
 import csdn from "./sites/csdn"
 import zhihu from "./sites/zhihu"
 import baidu from "./sites/baidu"
+import github from "./sites/github"
 
 const sites = [
   {id: 1, name: "zhihu", match: "https://zhuanlan.zhihu.com/p/.+", enable: true, version: "1.0.0", mod: zhihu},
   {id: 2, name: "zhihu2", match: "https://www.zhihu.com/question/.+", enable: true, version: "1.0.0", mod: zhihu},
   {id: 3, name: "csdn", match: "https://blog.csdn.net/.+/article/details/.+", enable: true, version: "1.0.0", mod: csdn},
   {id: 4, name: "baidu", match: "https://www.baidu.com/s?.+", enable: true, version: "1.0.0", mod: baidu},
+  {id: 5, name: "github", match: "https://github.com/.+", enable: true, version: "1.0.0", mod: github},
 ] as SitePluginConfigType[]
 
 
