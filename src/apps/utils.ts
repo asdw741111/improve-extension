@@ -89,3 +89,10 @@ export const waitUntilRender = ({ check, interval = 100, maxWaitSecond = 0 }: Wa
   }, interval, true).start()
 })
 
+export const enableCopy = (arr: HTMLCollectionOf<Element>) => {
+  for(let i = 0;i < arr.length;i++){
+    const newDom = arr[i].cloneNode(true)
+    arr[i].replaceWith(newDom)
+  }
+}
+

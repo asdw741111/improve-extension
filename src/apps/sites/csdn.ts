@@ -6,6 +6,9 @@
  * @lastTime    : 2024-03-11 10:24:04
  * @FilePath    : /improve/src/sites/csdn.ts
  */
+
+import { enableCopy } from "../utils"
+
 /**
  * 示例：
  * 实现功能如下：
@@ -28,7 +31,7 @@ const init = () => {
   (window as any).csdn.loginBox.show = () => {}
   // 取消复制后追加转载信息等垃圾内容
   const arr = document.getElementsByTagName("code")
-  for(let i = 0;i < arr.length;i++){arr[i].addEventListener("copy",() => {})}
+  enableCopy(arr)
 
   const removeGuanzhu = () => {
     const conDom = document.getElementById("article_content")

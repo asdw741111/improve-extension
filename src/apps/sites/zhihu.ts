@@ -7,7 +7,7 @@
  * @FilePath    : /improve/src/apps/sites/zhihu.ts
  */
 
-import { waitUntilRender } from "../utils"
+import { enableCopy, waitUntilRender } from "../utils"
 import $ from "jquery"
 
 const checkLogin = () => {
@@ -45,6 +45,9 @@ const removeAd = () => {
   $(".Banner-link").remove()
   // 问题中间插入的广告
   $(".Pc-word").remove()
+  // 取消复制后追加转载信息等垃圾内容
+  const arr = document.getElementsByClassName("ztext")
+  enableCopy(arr)
 }
 
 const addPanel = () => {
