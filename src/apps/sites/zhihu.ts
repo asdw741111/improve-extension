@@ -68,7 +68,7 @@ const init = () => {
   "use strict"
   checkLogin()
   plainLink()
-  removeAd()
+  // removeAd()
   addPanel()
 }
 

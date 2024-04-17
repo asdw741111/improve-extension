@@ -14,6 +14,7 @@ import csdn from "./sites/csdn"
 import zhihu from "./sites/zhihu"
 import baidu from "./sites/baidu"
 import github from "./sites/github"
+import bing from "./sites/bing"
 
 const sites = [
   {id: 1, name: "zhihu", match: "https://zhuanlan.zhihu.com/p/.+", enable: true, version: "1.0.0", mod: zhihu},
@@ -21,6 +22,7 @@ const sites = [
   {id: 3, name: "csdn", match: "https://blog.csdn.net/.+/article/details/.+", enable: true, version: "1.0.0", mod: csdn},
   {id: 4, name: "baidu", match: "https://www.baidu.com/s?.+", enable: true, version: "1.0.0", mod: baidu},
   {id: 5, name: "github", match: "https://github.com/.+", enable: true, version: "1.0.0", mod: github},
+  {id: 6, name: "bing", match: "https://cn.bing.com/search[?]q=.+", enable: true, version: "1.0.0", mod: bing},
 ] as SitePluginConfigType[]
 
 
